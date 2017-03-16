@@ -2,17 +2,15 @@
 <?php
 
 /*
-Matt's database
+Matt's database details
 */
 
 $host = 'localhost';
 $user = '1611892amber';
 $password = 'Qwerty12';
 
-
-
 /*
-Group database
+Group database details
 */
 
 /*
@@ -21,6 +19,8 @@ $user = 'group16';
 $password = 'REACH-state-worn-gone';
 */
 
+/* the code below is handy for displaying if you are not connected to a DB
+*/
 /*
 $mysqli = new mysqli($host,$user,$password);
 if ($mysqli->connect_errno) {
@@ -33,10 +33,32 @@ session_start();
     $_SESSION['message'] = '';
     $mysqli = new mysqli($host,$user,$password);
 if ($mysqli->connect_errno) {
-    printf("Connection failed: %s\n", $mysqli->connect_error);
+    printf("No connection to mySQL: %s\n", $mysqli->connect_error);
     die();
 }
-require 'validate.php';
+/*
+the sql below is just testing creating a table on my personal phpBD. this will have already have been created on the server and just INSERT required which is on the validation page. If you try to run this page again before deleting the table there will be an sql error Matt.
+*/
+
+/*$mysqli->query('CREATE TABLE `test`.`test_users` 
+(
+   `user_id` int(11) NOT NULL,
+  `first_name` varchar(32) DEFAULT NULL,
+  `last_name` varchar(32) DEFAULT NULL,
+  `user_email` varchar(32) DEFAULT NULL,
+  `user_subject` varchar(32) DEFAULT NULL,
+  `user_tags` varchar(32) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  
+  
+
+    
+PRIMARY KEY (`user_id`) 
+);') or die($mysqli->error);
+
+*/
+
+
 
 
 
@@ -51,12 +73,14 @@ require 'validate.php';
 		
     <form class="form" action="validate.php" method="post" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"></div>
-      <input type="text" placeholder="First Name" name="firstname" required />
-	  <input type="text" placeholder="Last Name" name="lastname" required />
-	  <input type="text" placeholder="Student Number" name="studentnumber" required />
-      <input type="email" placeholder="Email" name="email" required />
+      <input type="text" placeholder="First Name" name="first_name" required />
+	  <input type="text" placeholder="Last Name" name="last_name" required />
+     <input type="email" placeholder="Email" name="user_email" required />
+	 <input type="text" placeholder="user_subject" name="user_subject" required />
+	 <input type="text" placeholder="user_tags" name="user_tags" required />
       <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
       <input type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required />
+	  
       <input type="submit" value="Register" name="register"  />
     </form>
   </div>
