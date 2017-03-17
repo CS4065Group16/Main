@@ -2,10 +2,10 @@
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Mar 16, 2017 at 03:18 PM
--- Server version: 10.1.20-MariaDB
--- PHP Version: 5.6.29
+-- Host: 127.0.0.1
+-- Generation Time: Mar 17, 2017 at 01:54 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -76,7 +76,7 @@ INSERT INTO `tags` (`tag_id`, `tag`) VALUES
 --
 
 CREATE TABLE `task` (
-  `task_id` varchar(32) NOT NULL,
+  `task_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `task_title` varchar(32) DEFAULT NULL,
   `task_type` varchar(32) DEFAULT NULL,
@@ -96,86 +96,86 @@ CREATE TABLE `task` (
 --
 
 INSERT INTO `task` (`task_id`, `user_id`, `task_title`, `task_type`, `task_desc`, `task_subject`, `page_count`, `word_count`, `file_format`, `sample_document`, `task_tags`, `created_at`, `updated_at`) VALUES
-('0164158758', 0, 'Web Design in 21st Century', 'MSc Thesis', 'Revision', 'Computer Science', 6, 79658, '', '', 'Web Design', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('0465045820', 0, 'HTML Overview', 'Project Report', 'Syntax Check', 'Computer Science', 458, 74010, '', '', 'Web Design', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('0611204487', 0, 'Java Review', 'Conference Research Paper', 'Proofreading', 'Computer Science', 156, 4615, '', '', 'Programming', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('0664128106', 0, 'Othello', 'Conference Research Paper', 'Review', 'English', 199, 31818, '', '', 'Theatre', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('0799614459', 0, 'Donne', 'MSc Thesis', 'Proofreading', 'English', 146, 13097, '', '', 'Poetry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('0941291553', 0, 'Web Design Worldwide', 'BSc Dissertation Paper', 'Revision', 'Computer Science', 261, 4525, '', '', 'Web Design', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('10148024410', 0, 'Wordsworth', 'MSc Thesis', 'Syntax Check', 'English', 239, 12963, '', '', 'Poetry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('1059875756', 0, 'Decline of Irish Music', 'Project Report', 'Proofreading', 'Music', 500, 83420, '', '', 'Irish', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('1077427425', 0, 'Marketing Mistakes', 'BSc Dissertation Paper', 'Review', 'Business', 434, 19234, '', '', 'Marketing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('1128816075', 0, 'Electricity and Physics', 'Project Report', 'Syntax Check', 'Science', 387, 22470, '', '', 'Physics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('1312108134', 0, 'Bug Reports Overview', 'PhD Thesis', 'Proofreading', 'Computer Science', 117, 33696, '', '', 'Software Testing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('1481031058', 0, 'Trad Music in Australia', 'Conference Research Paper', 'Proofreading', 'Music', 198, 29689, '', '', 'Traditional', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('1524980579', 0, 'Inorganic Chemistry', 'Project Report', 'Proofreading', 'Science', 4, 42089, '', '', 'Chemistry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('17204614910', 0, 'Intermediate Accounting', 'MSc Thesis', 'Review', 'Business', 225, 44329, '', '', 'Accounting', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('1725276933', 0, 'Chemisty in 21st Century', 'Project Report', 'Revision', 'Science', 1, 53964, '', '', 'Chemistry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('1780926480', 0, 'Retail Management', 'Assignment', 'Review', 'Business', 46, 40923, '', '', 'Management', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('1939681626', 0, 'Digital Marketing', 'PhD Thesis', 'Revision', 'Business', 471, 44308, '', '', 'Marketing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('2035585236', 0, 'Optics in Physics', 'BSc Dissertation Paper', 'Review', 'Science', 435, 8772, '', '', 'Physics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('2097949967', 0, 'IDE Then and Now', 'BSc Dissertation Paper', 'Revision', 'Computer Science', 209, 57418, '', '', 'Programming', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('2559901021', 0, 'Herpetology', 'Project Report', 'Syntax Check', 'Science', 153, 27158, '', '', 'Biology', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('2670020313', 0, 'Blake', 'BSc Dissertation Paper', 'Syntax Check', 'English', 175, 65886, '', '', 'Poetry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('2857892470', 0, 'Charles Dickens', 'MSc Thesis', 'Review', 'English', 228, 41147, '', '', 'Literature', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('30749087010', 0, 'Profit Management', 'MSc Thesis', 'Proofreading', 'Business', 343, 91488, '', '', 'Management', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('3305403586', 0, 'Best Practices in Marketing', 'PhD Thesis', 'Revision', 'Business', 6, 67112, '', '', 'Marketing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('3398849148', 0, 'PHP and SQL Assignment', 'Assignment', 'Syntax Check', 'Computer Science', 143, 21748, '', '', 'Databases', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('3429043611', 0, 'Keats', 'Assignment', 'Review', 'English', 438, 8392, '', '', 'Poetry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('3643641877', 0, 'Irish Musicians Abroad', 'Conference Research Paper', 'Syntax Check', 'Music', 124, 51500, '', '', 'Irish', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('37943789210', 0, 'Mammalogy', 'BSc Dissertation Paper', 'Revision', 'Science', 158, 88960, '', '', 'Biology', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('3813665534', 0, 'Zoology', 'Assignment', 'Revision', 'Science', 230, 57167, '', '', 'Biology', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('3818272972', 0, 'Chaucer', 'Project Report', 'Review', 'English', 413, 8785, '', '', 'Literature', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('38475989710', 0, 'Physics in Real Life', 'MSc Thesis', 'Proofreading', 'Science', 58, 13857, '', '', 'Physics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('3936410631', 0, 'Testing Preparation', 'Project Report', 'Syntax Check', 'Computer Science', 288, 62975, '', '', 'Software Testing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('3945014832', 0, 'Wagner', 'Project Report', 'Syntax Check', 'Music', 357, 17044, '', '', 'Classical', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('3954555891', 0, 'History of Music Therapy', 'MSc Thesis', 'Proofreading', 'Music', 495, 37230, '', '', 'History', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('4088669452', 0, 'The Future of Irish Music in Eur', 'BSc Dissertation Paper', 'Proofreading', 'Music', 191, 90679, '', '', 'Irish', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('4201104109', 0, 'Crucial Testing Practices', 'Conference Research Paper', 'Proofreading', 'Computer Science', 154, 21161, '', '', 'Software Testing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('4380742253', 0, 'Music Culture in 2000', 'Assignment', 'Revision', 'Music', 92, 84488, '', '', 'History', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('4837299407', 0, 'Classical Irish Music in Rural I', 'PhD Thesis', 'Proofreading', 'Music', 313, 9817, '', '', 'Irish', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('4992645968', 0, 'Trad Music in New York', 'Conference Research Paper', 'Syntax Check', 'Music', 343, 18591, '', '', 'Traditional', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5065727570', 0, 'Schumann', 'BSc Dissertation Paper', 'Revision', 'Music', 8, 756, '', '', 'Classical', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5208691175', 0, 'Bad Management', 'Project Report', 'Review', 'Business', 105, 35244, '', '', 'Management', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5234011437', 0, 'Management Practices', 'MSc Thesis', 'Review', 'Business', 258, 31820, '', '', 'Management', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5290317910', 0, 'Hamlet', 'BSc Dissertation Paper', 'Syntax Check', 'English', 174, 10750, '', '', 'Theatre', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5365658906', 0, 'Syntax in English Linguistcs', 'MSc Thesis', 'Syntax Check', 'English', 228, 15599, '', '', 'Linguistics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5480635026', 0, 'Mechanics', 'BSc Dissertation Paper', 'Revision', 'Science', 226, 16946, '', '', 'Physics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5576963393', 0, 'Morphology', 'PhD Thesis', 'Syntax Check', 'English', 371, 46144, '', '', 'Linguistics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5693700593', 0, 'Finance and Business', 'Conference Research Paper', 'Proofreading', 'Business', 121, 18510, '', '', 'Finance', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5917341672', 0, 'American Finance in 2017', 'PhD Thesis', 'Proofreading', 'Business', 193, 70464, '', '', 'Finance', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5920769270', 0, 'Business Marketing', 'Project Report', 'Syntax Check', 'Business', 476, 40776, '', '', 'Marketing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('5922583220', 0, 'Bugzilla', 'Conference Research Paper', 'Syntax Check', 'Computer Science', 351, 67648, '', '', 'Software Testing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('6194339764', 0, 'The Evolution of Programming', 'BSc Dissertation Paper', 'Syntax Check', 'Computer Science', 240, 48036, '', '', 'Programming', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('6373341631', 0, 'Death of a Salesman', 'Project Report', 'Syntax Check', 'English', 275, 35463, '', '', 'Theatre', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('6666066820', 0, 'Semantics', 'Project Report', 'Revision', 'English', 481, 26582, '', '', 'Linguistics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('6669534280', 0, 'Web Design for a new era', 'PhD Thesis', 'Syntax Check', 'Computer Science', 3, 64536, '', '', 'Web Design', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('6849680269', 0, 'The Downfall of the Celtic Tiger', 'MSc Thesis', 'Proofreading', 'Business', 89, 80179, '', '', 'Finance', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('7140108676', 0, 'Programming Problems', 'Conference Research Paper', 'Proofreading', 'Computer Science', 156, 46373, '', '', 'Programming', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('7454298540', 0, 'Trad Music in Canada', 'Conference Research Paper', 'Syntax Check', 'Music', 436, 81213, '', '', 'Traditional', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('7655805407', 0, 'Accounting Best Practice', 'Project Report', 'Revision', 'Business', 144, 41980, '', '', 'Accounting', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('7751466790', 0, 'Database Management', 'Conference Research Paper', 'Review', 'Computer Science', 375, 48771, '', '', 'Databases', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('7759607156', 0, 'Biochemistry', 'PhD Thesis', 'Review', 'Science', 261, 67706, '', '', 'Chemisty', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('7854567603', 0, 'Technology in Space', 'PhD Thesis', 'Review', 'Science', 122, 49066, '', '', 'Astronomy', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('7872098873', 0, 'Database Errors', 'Assignment', 'Syntax Check', 'Computer Science', 412, 58593, '', '', 'Databases', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('8094412518', 0, 'Phonetics', 'BSc Dissertation Paper', 'Proofreading', 'English', 344, 66687, '', '', 'Linguistics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('8396495483', 0, 'Shakespeare', 'MSc Thesis', 'Proofreading', 'English', 453, 35274, '', '', 'Literature', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('8486908817', 0, 'Bach', 'Project Report', 'Revision', 'Music', 10, 73471, '', '', 'Classical', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('8492382058', 0, 'MySQL Report', 'Project Report', 'Review', 'Computer Science', 324, 89304, '', '', 'Databases', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('8711309512', 0, 'Trad Music in Boston', 'MSc Thesis', 'Syntax Check', 'Music', 441, 69834, '', '', 'Traditional', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('8862514638', 0, 'Music Culture in 1990', 'Assignment', 'Review', 'Music', 234, 88180, '', '', 'History', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9066243155', 0, 'Jane Austen', 'Conference Research Paper', 'Revision', 'English', 146, 88803, '', '', 'Literature', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9070030667', 0, 'King Lear', 'BSc Dissertation Paper', 'Review', 'English', 315, 82282, '', '', 'Theatre', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9130657032', 0, 'NASA in 2017', 'Assignment', 'Proofreading', 'Science', 282, 69529, '', '', 'Astronomy', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9181916817', 0, 'Mozart', 'MSc Thesis', 'Proofreading', 'Music', 176, 50463, '', '', 'Classical', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9280262165', 0, 'Advanced Accounting', 'MSc Thesis', 'Proofreading', 'Business', 93, 45918, '', '', 'Accounting', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9352279867', 0, 'Organisms', 'Conference Research Paper', 'Revision', 'Science', 46, 73525, '', '', 'Chemisty', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9501213323', 0, 'Space Exploration', 'PhD Thesis', 'Review', 'Science', 181, 56148, '', '', 'Astronomy', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9546140856', 0, 'Astronomy in Today’s World', 'MSc Thesis', 'Review', 'Science', 313, 63405, '', '', 'Astronomy', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9547415557', 0, 'Ethology', 'BSc Dissertation Paper', 'Proofreading', 'Science', 103, 81735, '', '', 'Biology', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9563854063', 0, 'Basic Accounting', 'Assignment', 'Proofreading', 'Business', 332, 68261, '', '', 'Accounting', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9650404546', 0, 'History of Music in Australia', 'MSc Thesis', 'Review', 'Music', 85, 84004, '', '', 'History', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
-('9965729646', 0, 'Stock Report', 'Assignment', 'Revision', 'Business', 64, 19019, '', '', 'Finance', '2017-03-16 11:47:14', '0000-00-00 00:00:00');
+(1, 0, 'Web Design in 21st Century', 'MSc Thesis', 'Revision', 'Computer Science', 6, 79658, '', '', 'Web Design', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(2, 0, 'HTML Overview', 'Project Report', 'Syntax Check', 'Computer Science', 458, 74010, '', '', 'Web Design', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(3, 0, 'Java Review', 'Conference Research Paper', 'Proofreading', 'Computer Science', 156, 4615, '', '', 'Programming', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(4, 0, 'Othello', 'Conference Research Paper', 'Review', 'English', 199, 31818, '', '', 'Theatre', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(5, 0, 'Donne', 'MSc Thesis', 'Proofreading', 'English', 146, 13097, '', '', 'Poetry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(6, 0, 'Web Design Worldwide', 'BSc Dissertation Paper', 'Revision', 'Computer Science', 261, 4525, '', '', 'Web Design', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(7, 0, 'Wordsworth', 'MSc Thesis', 'Syntax Check', 'English', 239, 12963, '', '', 'Poetry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(8, 0, 'Decline of Irish Music', 'Project Report', 'Proofreading', 'Music', 500, 83420, '', '', 'Irish', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(9, 0, 'Marketing Mistakes', 'BSc Dissertation Paper', 'Review', 'Business', 434, 19234, '', '', 'Marketing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(10, 0, 'Electricity and Physics', 'Project Report', 'Syntax Check', 'Science', 387, 22470, '', '', 'Physics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(11, 0, 'Bug Reports Overview', 'PhD Thesis', 'Proofreading', 'Computer Science', 117, 33696, '', '', 'Software Testing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(12, 0, 'Trad Music in Australia', 'Conference Research Paper', 'Proofreading', 'Music', 198, 29689, '', '', 'Traditional', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(13, 0, 'Inorganic Chemistry', 'Project Report', 'Proofreading', 'Science', 4, 42089, '', '', 'Chemistry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(14, 0, 'Intermediate Accounting', 'MSc Thesis', 'Review', 'Business', 225, 44329, '', '', 'Accounting', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(15, 0, 'Chemisty in 21st Century', 'Project Report', 'Revision', 'Science', 1, 53964, '', '', 'Chemistry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(16, 0, 'Retail Management', 'Assignment', 'Review', 'Business', 46, 40923, '', '', 'Management', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(17, 0, 'Digital Marketing', 'PhD Thesis', 'Revision', 'Business', 471, 44308, '', '', 'Marketing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(18, 0, 'Optics in Physics', 'BSc Dissertation Paper', 'Review', 'Science', 435, 8772, '', '', 'Physics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(19, 0, 'IDE Then and Now', 'BSc Dissertation Paper', 'Revision', 'Computer Science', 209, 57418, '', '', 'Programming', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(20, 0, 'Herpetology', 'Project Report', 'Syntax Check', 'Science', 153, 27158, '', '', 'Biology', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(21, 0, 'Blake', 'BSc Dissertation Paper', 'Syntax Check', 'English', 175, 65886, '', '', 'Poetry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(22, 0, 'Charles Dickens', 'MSc Thesis', 'Review', 'English', 228, 41147, '', '', 'Literature', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(23, 0, 'Profit Management', 'MSc Thesis', 'Proofreading', 'Business', 343, 91488, '', '', 'Management', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(24, 0, 'Best Practices in Marketing', 'PhD Thesis', 'Revision', 'Business', 6, 67112, '', '', 'Marketing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(25, 0, 'PHP and SQL Assignment', 'Assignment', 'Syntax Check', 'Computer Science', 143, 21748, '', '', 'Databases', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(26, 0, 'Keats', 'Assignment', 'Review', 'English', 438, 8392, '', '', 'Poetry', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(27, 0, 'Irish Musicians Abroad', 'Conference Research Paper', 'Syntax Check', 'Music', 124, 51500, '', '', 'Irish', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(28, 0, 'Mammalogy', 'BSc Dissertation Paper', 'Revision', 'Science', 158, 88960, '', '', 'Biology', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(29, 0, 'Zoology', 'Assignment', 'Revision', 'Science', 230, 57167, '', '', 'Biology', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(30, 0, 'Chaucer', 'Project Report', 'Review', 'English', 413, 8785, '', '', 'Literature', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(31, 0, 'Physics in Real Life', 'MSc Thesis', 'Proofreading', 'Science', 58, 13857, '', '', 'Physics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(32, 0, 'Testing Preparation', 'Project Report', 'Syntax Check', 'Computer Science', 288, 62975, '', '', 'Software Testing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(33, 0, 'Wagner', 'Project Report', 'Syntax Check', 'Music', 357, 17044, '', '', 'Classical', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(34, 0, 'History of Music Therapy', 'MSc Thesis', 'Proofreading', 'Music', 495, 37230, '', '', 'History', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(35, 0, 'The Future of Irish Music in Eur', 'BSc Dissertation Paper', 'Proofreading', 'Music', 191, 90679, '', '', 'Irish', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(36, 0, 'Crucial Testing Practices', 'Conference Research Paper', 'Proofreading', 'Computer Science', 154, 21161, '', '', 'Software Testing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(37, 0, 'Music Culture in 2000', 'Assignment', 'Revision', 'Music', 92, 84488, '', '', 'History', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(38, 0, 'Classical Irish Music in Rural I', 'PhD Thesis', 'Proofreading', 'Music', 313, 9817, '', '', 'Irish', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(39, 0, 'Trad Music in New York', 'Conference Research Paper', 'Syntax Check', 'Music', 343, 18591, '', '', 'Traditional', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(40, 0, 'Schumann', 'BSc Dissertation Paper', 'Revision', 'Music', 8, 756, '', '', 'Classical', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(41, 0, 'Bad Management', 'Project Report', 'Review', 'Business', 105, 35244, '', '', 'Management', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(42, 0, 'Management Practices', 'MSc Thesis', 'Review', 'Business', 258, 31820, '', '', 'Management', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(43, 0, 'Hamlet', 'BSc Dissertation Paper', 'Syntax Check', 'English', 174, 10750, '', '', 'Theatre', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(44, 0, 'Syntax in English Linguistcs', 'MSc Thesis', 'Syntax Check', 'English', 228, 15599, '', '', 'Linguistics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(45, 0, 'Mechanics', 'BSc Dissertation Paper', 'Revision', 'Science', 226, 16946, '', '', 'Physics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(46, 0, 'Morphology', 'PhD Thesis', 'Syntax Check', 'English', 371, 46144, '', '', 'Linguistics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(47, 0, 'Finance and Business', 'Conference Research Paper', 'Proofreading', 'Business', 121, 18510, '', '', 'Finance', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(48, 0, 'American Finance in 2017', 'PhD Thesis', 'Proofreading', 'Business', 193, 70464, '', '', 'Finance', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(49, 0, 'Business Marketing', 'Project Report', 'Syntax Check', 'Business', 476, 40776, '', '', 'Marketing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(50, 0, 'Bugzilla', 'Conference Research Paper', 'Syntax Check', 'Computer Science', 351, 67648, '', '', 'Software Testing', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(51, 0, 'The Evolution of Programming', 'BSc Dissertation Paper', 'Syntax Check', 'Computer Science', 240, 48036, '', '', 'Programming', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(52, 0, 'Death of a Salesman', 'Project Report', 'Syntax Check', 'English', 275, 35463, '', '', 'Theatre', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(53, 0, 'Semantics', 'Project Report', 'Revision', 'English', 481, 26582, '', '', 'Linguistics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(54, 0, 'Web Design for a new era', 'PhD Thesis', 'Syntax Check', 'Computer Science', 3, 64536, '', '', 'Web Design', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(55, 0, 'The Downfall of the Celtic Tiger', 'MSc Thesis', 'Proofreading', 'Business', 89, 80179, '', '', 'Finance', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(56, 0, 'Programming Problems', 'Conference Research Paper', 'Proofreading', 'Computer Science', 156, 46373, '', '', 'Programming', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(57, 0, 'Trad Music in Canada', 'Conference Research Paper', 'Syntax Check', 'Music', 436, 81213, '', '', 'Traditional', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(58, 0, 'Accounting Best Practice', 'Project Report', 'Revision', 'Business', 144, 41980, '', '', 'Accounting', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(59, 0, 'Database Management', 'Conference Research Paper', 'Review', 'Computer Science', 375, 48771, '', '', 'Databases', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(60, 0, 'Biochemistry', 'PhD Thesis', 'Review', 'Science', 261, 67706, '', '', 'Chemisty', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(61, 0, 'Technology in Space', 'PhD Thesis', 'Review', 'Science', 122, 49066, '', '', 'Astronomy', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(62, 0, 'Database Errors', 'Assignment', 'Syntax Check', 'Computer Science', 412, 58593, '', '', 'Databases', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(63, 0, 'Phonetics', 'BSc Dissertation Paper', 'Proofreading', 'English', 344, 66687, '', '', 'Linguistics', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(64, 0, 'Shakespeare', 'MSc Thesis', 'Proofreading', 'English', 453, 35274, '', '', 'Literature', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(65, 0, 'Bach', 'Project Report', 'Revision', 'Music', 10, 73471, '', '', 'Classical', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(66, 0, 'MySQL Report', 'Project Report', 'Review', 'Computer Science', 324, 89304, '', '', 'Databases', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(67, 0, 'Trad Music in Boston', 'MSc Thesis', 'Syntax Check', 'Music', 441, 69834, '', '', 'Traditional', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(68, 0, 'Music Culture in 1990', 'Assignment', 'Review', 'Music', 234, 88180, '', '', 'History', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(69, 0, 'Jane Austen', 'Conference Research Paper', 'Revision', 'English', 146, 88803, '', '', 'Literature', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(70, 0, 'King Lear', 'BSc Dissertation Paper', 'Review', 'English', 315, 82282, '', '', 'Theatre', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(71, 0, 'NASA in 2017', 'Assignment', 'Proofreading', 'Science', 282, 69529, '', '', 'Astronomy', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(72, 0, 'Mozart', 'MSc Thesis', 'Proofreading', 'Music', 176, 50463, '', '', 'Classical', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(73, 0, 'Advanced Accounting', 'MSc Thesis', 'Proofreading', 'Business', 93, 45918, '', '', 'Accounting', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(74, 0, 'Organisms', 'Conference Research Paper', 'Revision', 'Science', 46, 73525, '', '', 'Chemisty', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(75, 0, 'Space Exploration', 'PhD Thesis', 'Review', 'Science', 181, 56148, '', '', 'Astronomy', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(76, 0, 'Astronomy in Today’s World', 'MSc Thesis', 'Review', 'Science', 313, 63405, '', '', 'Astronomy', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(77, 0, 'Ethology', 'BSc Dissertation Paper', 'Proofreading', 'Science', 103, 81735, '', '', 'Biology', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(78, 0, 'Basic Accounting', 'Assignment', 'Proofreading', 'Business', 332, 68261, '', '', 'Accounting', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(79, 0, 'History of Music in Australia', 'MSc Thesis', 'Review', 'Music', 85, 84004, '', '', 'History', '2017-03-16 11:47:14', '0000-00-00 00:00:00'),
+(80, 0, 'Stock Report', 'Assignment', 'Revision', 'Business', 64, 19019, '', '', 'Finance', '2017-03-16 11:47:14', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -184,7 +184,7 @@ INSERT INTO `task` (`task_id`, `user_id`, `task_title`, `task_type`, `task_desc`
 --
 
 CREATE TABLE `task_claimed` (
-  `task_id` varchar(32) NOT NULL,
+  `task_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -195,7 +195,7 @@ CREATE TABLE `task_claimed` (
 --
 
 CREATE TABLE `task_completed` (
-  `task_id` varchar(32) NOT NULL,
+  `task_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `feedback` tinyint(4) NOT NULL,
   `review` text NOT NULL
@@ -208,7 +208,7 @@ CREATE TABLE `task_completed` (
 --
 
 CREATE TABLE `task_flagged` (
-  `task_id` varchar(32) NOT NULL,
+  `task_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -219,7 +219,7 @@ CREATE TABLE `task_flagged` (
 --
 
 CREATE TABLE `task_tags` (
-  `task_id` varchar(32) NOT NULL,
+  `task_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -231,6 +231,7 @@ CREATE TABLE `task_tags` (
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
+  `role` enum('student','moderator') NOT NULL DEFAULT 'student',
   `first_name` varchar(32) DEFAULT NULL,
   `last_name` varchar(32) DEFAULT NULL,
   `user_email` varchar(32) DEFAULT NULL,
@@ -245,27 +246,27 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `user_email`, `user_subject`, `user_tags`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'Rachel', 'Sullivan', 'rsullivan0@about.com', 'English', 'Literature', 'w2cQMjUv', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(2, 'Timothy', 'Green', 'tgreen1@illinois.edu', 'English', 'Theatre', 'ZFi3bX8J3aVb', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(3, 'Diana', 'Walker', 'dwalker2@unc.edu', 'English', 'Poetry', '2MFu0FN', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(4, 'Teresa', 'Richards', 'trichards3@cafepress.com', 'English', 'Linguistics', '5h4RslvOg', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(5, 'Donald', 'White', 'dwhite4@bloomberg.com', 'Science', 'Biology', 'OcrQYU', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(6, 'Daniel', 'Romero', 'dromero5@state.tx.us', 'Science', 'Chemistry', 'QLEGAgk7xBUB', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(7, 'Pamela', 'Washington', 'pwashington6@washington.edu', 'Science', 'Physics', 'fEYVdoocLQJb', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(8, 'Ernest', 'Martinez', 'emartinez7@ftc.gov', 'Science', 'Astronomy', 'csfvnoKUoX8e', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(9, 'Mary', 'Howell', 'mhowell8@slideshare.net', 'Business', 'Accounting', 'xx6fKuDcDfka', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(10, 'Wayne', 'Gibson', 'wgibson9@zimbio.com', 'Business', 'Management', 'Wunb7mQYoAm', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(11, 'Timothy', 'Robertson', 'trobertsona@blogtalkradio.com', 'Business', 'Marketing', 'vgxRI8Uqh', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(12, 'Jeremy', 'Moore', 'jmooreb@trellian.com', 'Business', 'Finance', '5YUCl4p59P2E', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(13, 'Kathryn', 'Patterson', 'kpattersonc@hugedomains.com', 'Computer Science', 'Software Testing', '67AD04p89L8P', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(14, 'Jessica', 'Chavez', 'jchavezd@examiner.com', 'Computer Science', 'Web Design', 'Gnxg4B4jY', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(15, 'Gerald', 'Diaz', 'gdiaze@google.com', 'Computer Science', 'Programming', 'L2n4G7T', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(16, 'Donna', 'Spencer', 'dspencerf@gizmodo.com', 'Computer Science', 'Databases', 'it1LE7EW6', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(17, 'Ernest', 'Shaw', 'eshawg@wikipedia.org', 'Music', 'Traditional', 'XH1NlHomk64', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(18, 'Katherine', 'Reed', 'kreedh@bigcartel.com', 'Music', 'History', 'PKWYozoITZfF', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(19, 'Ernest', 'Lane', 'elanei@mit.edu', 'Music', 'Classical', 'qBxBlC4b', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
-(20, 'Virginia', 'Miller', 'vmillerj@google.it', 'Music', 'Irish', 'Rix0mjt2w', '2017-03-16 11:48:12', '0000-00-00 00:00:00');
+INSERT INTO `user` (`user_id`, `role`, `first_name`, `last_name`, `user_email`, `user_subject`, `user_tags`, `password`, `created_at`, `updated_at`) VALUES
+(1, 'student', 'Rachel', 'Sullivan', 'rsullivan0@about.com', 'English', 'Literature', 'w2cQMjUv', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(2, 'student', 'Timothy', 'Green', 'tgreen1@illinois.edu', 'English', 'Theatre', 'ZFi3bX8J3aVb', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(3, 'student', 'Diana', 'Walker', 'dwalker2@unc.edu', 'English', 'Poetry', '2MFu0FN', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(4, 'student', 'Teresa', 'Richards', 'trichards3@cafepress.com', 'English', 'Linguistics', '5h4RslvOg', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(5, 'student', 'Donald', 'White', 'dwhite4@bloomberg.com', 'Science', 'Biology', 'OcrQYU', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(6, 'student', 'Daniel', 'Romero', 'dromero5@state.tx.us', 'Science', 'Chemistry', 'QLEGAgk7xBUB', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(7, 'student', 'Pamela', 'Washington', 'pwashington6@washington.edu', 'Science', 'Physics', 'fEYVdoocLQJb', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(8, 'student', 'Ernest', 'Martinez', 'emartinez7@ftc.gov', 'Science', 'Astronomy', 'csfvnoKUoX8e', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(9, 'student', 'Mary', 'Howell', 'mhowell8@slideshare.net', 'Business', 'Accounting', 'xx6fKuDcDfka', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(10, 'student', 'Wayne', 'Gibson', 'wgibson9@zimbio.com', 'Business', 'Management', 'Wunb7mQYoAm', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(11, 'student', 'Timothy', 'Robertson', 'trobertsona@blogtalkradio.com', 'Business', 'Marketing', 'vgxRI8Uqh', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(12, 'student', 'Jeremy', 'Moore', 'jmooreb@trellian.com', 'Business', 'Finance', '5YUCl4p59P2E', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(13, 'student', 'Kathryn', 'Patterson', 'kpattersonc@hugedomains.com', 'Computer Science', 'Software Testing', '67AD04p89L8P', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(14, 'student', 'Jessica', 'Chavez', 'jchavezd@examiner.com', 'Computer Science', 'Web Design', 'Gnxg4B4jY', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(15, 'student', 'Gerald', 'Diaz', 'gdiaze@google.com', 'Computer Science', 'Programming', 'L2n4G7T', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(16, 'student', 'Donna', 'Spencer', 'dspencerf@gizmodo.com', 'Computer Science', 'Databases', 'it1LE7EW6', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(17, 'student', 'Ernest', 'Shaw', 'eshawg@wikipedia.org', 'Music', 'Traditional', 'XH1NlHomk64', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(18, 'student', 'Katherine', 'Reed', 'kreedh@bigcartel.com', 'Music', 'History', 'PKWYozoITZfF', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(19, 'student', 'Ernest', 'Lane', 'elanei@mit.edu', 'Music', 'Classical', 'qBxBlC4b', '2017-03-16 11:48:12', '0000-00-00 00:00:00'),
+(20, 'student', 'Virginia', 'Miller', 'vmillerj@google.it', 'Music', 'Irish', 'Rix0mjt2w', '2017-03-16 11:48:12', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -324,7 +325,6 @@ ALTER TABLE `tags`
 --
 ALTER TABLE `task`
   ADD PRIMARY KEY (`task_id`),
-  ADD KEY `task_id` (`task_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
@@ -396,6 +396,21 @@ ALTER TABLE `user_tags`
 ALTER TABLE `clicks`
   MODIFY `tag_clicks` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `task`
+--
+ALTER TABLE `task`
+  MODIFY `task_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
+-- AUTO_INCREMENT for table `user_reputation`
+--
+ALTER TABLE `user_reputation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- Constraints for dumped tables
 --
 
@@ -410,7 +425,7 @@ ALTER TABLE `clicks`
 --
 ALTER TABLE `task_claimed`
   ADD CONSTRAINT `task_claimed_ibfk_1` FOREIGN KEY (`task_id`) REFERENCES `task` (`task_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `task_claimed_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `task_claimed_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `task_completed`
@@ -430,27 +445,27 @@ ALTER TABLE `task_flagged`
 -- Constraints for table `task_tags`
 --
 ALTER TABLE `task_tags`
-  ADD CONSTRAINT `task_tags_ibfk_1` FOREIGN KEY (`task_id`) REFERENCES `task` (`task_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `task_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`tag_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `task_tags_ibfk_1` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`tag_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `task_tags_ibfk_2` FOREIGN KEY (`task_id`) REFERENCES `task` (`task_id`);
 
 --
 -- Constraints for table `user_banned`
 --
 ALTER TABLE `user_banned`
-  ADD CONSTRAINT `user_banned_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `user_banned_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 
 --
 -- Constraints for table `user_reputation`
 --
 ALTER TABLE `user_reputation`
-  ADD CONSTRAINT `user_reputation_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `user_reputation_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 
 --
 -- Constraints for table `user_tags`
 --
 ALTER TABLE `user_tags`
-  ADD CONSTRAINT `user_tags_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `user_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`tag_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `user_tags_ibfk_1` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`tag_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `user_tags_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
