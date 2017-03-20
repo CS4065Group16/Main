@@ -1,25 +1,21 @@
 <?php 
 
 $host = 'localhost';
-$user = '';
+$user = 'root';
 $password = '';
-$dbname='test';
+$dbname='playitbypeerthree';
 
 session_start();
     $_SESSION['message'] = '';
-    $mysqli = new mysqli($host,$user,$password,$dbname);
+    $mysqli = new mysqli($host,$user,$password, $dbname);
 	
 	
 	if ($mysqli->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $mysqli->connect_error);
 } 
 echo "Connected successfully";
 	
 	
-if ($mysqli->connect_errno) {
-    printf("No connection to mySQL: %s\n", $mysqli->connect_error);
-    die();
-}
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,15 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		   
 		   $result = $mysqli->query("SELECT user_id FROM test_users");
 
-    /* determine number of rows to be the next user ID */
-    $row_count = $result->num_rows;
-	echo $row_count;
-	$row_count++;
-	echo $row_count;
+  
 
 		   
 
-        $user_id = $row_count+1000000;
+        $user_name = $_POST['user_name'];
         $first_name = $_POST['first_name'];
 		$last_name = $_POST['last_name'];
 		$user_email = $_POST['user_email'];
@@ -49,22 +41,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = md5($_POST['password']);
 					
 				
-		$sql= "INSERT INTO test.test_users (user_id, first_name, last_name, user_email, user_subject, user_tags, password) VALUES ('$user_id', '$first_name', '$last_name', '$user_email', '$user_subject', '$user_tags', '$password');";
+		$sql= "INSERT INTO user (user_name, first_name, last_name, user_email, user_subject, user_tags, password) VALUES ('$user_name', '$first_name', '$last_name', '$user_email', '$user_subject', '$user_tags', '$password');";
       
 	  if ($mysqli->query($sql) === TRUE) {
-		  echo "Added to DB.";
+		  printf("Congratulations! You have been registered!") ;
+		  header( "location: welcome.php" );
 	  } else {
 		  echo "ERROR. Data not added!" . $sql . "<br>" . $mysqli->error;
 	  }
 	  
 	  
-/*
-$sql = 'INSERT INTO test_users'.
-'(user_id, first_name, last_name, user_email, user_subject, user_tags, password) '.
-'VALUES
-(1, "Rachel", "Sullivan", "rsullivan0@about.com", "English", "Literature", "w2cQMjUv")';
 
-*/
 	  
 	  
 	  

@@ -76,13 +76,14 @@ PRIMARY KEY (`user_id`)
 	<h2>Please <button type="button" onclick="alert('Directs to sign in page!')"> sign in</button>, or register below </h2>
 	
 		
-    <form class="form" action="validate.php" method="post" enctype="multipart/form-data" autocomplete="off">
+    <form class="form" action="register.php" method="post" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"></div>
+	  <input type="text" placeholder="User Name" name="user_name" required />
       <input type="text" placeholder="First Name" name="first_name" required />
 	  <input type="text" placeholder="Last Name" name="last_name" required />
      <input type="email" placeholder="Email" name="user_email" required />
-	 <input type="text" placeholder="user_subject" name="user_subject" required />
-	 <input type="text" placeholder="user_tags" name="user_tags" required />
+	 <input type="text" placeholder="User Subject" name="user_subject" required />
+	 <input type="text" placeholder="User Tags" name="user_tags" required />
       <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
       <input type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required />
 	  
