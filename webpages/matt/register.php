@@ -1,79 +1,93 @@
-<?php 
+<link rel="stylesheet" href="matt.css" type="text/css">
+<?php
+
+/*
+Matt's database details
+user=1611892amber
+password=Qwerty12
+*/
 
 $host = 'localhost';
-$user = 'root';
+$user = '';
 $password = '';
-$dbname='playitbypeerthree';
+
+/*
+Group database details
+*/
+
+/*
+$host = 'localhost';
+$user = 'group16';
+$password = 'REACH-state-worn-gone';
+*/
+
+/* the code below is handy for displaying if you are not connected to a DB
+*/
+/*
+$mysqli = new mysqli($host,$user,$password);
+if ($mysqli->connect_errno) {
+    printf("Connection failed: %s\n", $mysqli->connect_error);
+    die();
+}
+*/
 
 session_start();
     $_SESSION['message'] = '';
-    $mysqli = new mysqli($host,$user,$password, $dbname);
-	
-	
-	if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-} 
-echo "Connected successfully";
-	
-	
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    
-
-   
-       if ($_POST['password'] == $_POST['confirmpassword']) {
-		   print_r($_POST);
-		   
-		   $result = $mysqli->query("SELECT user_id FROM test_users");
-
-  
-
-		   
-
-        $user_name = $_POST['user_name'];
-        $first_name = $_POST['first_name'];
-		$last_name = $_POST['last_name'];
-		$user_email = $_POST['user_email'];
-		$user_subject = $_POST['user_subject'];
-		$user_tags = $_POST['user_tags'];
-        $password = md5($_POST['password']);
-					
-				
-		$sql= "INSERT INTO user (user_name, first_name, last_name, user_email, user_subject, user_tags, password) VALUES ('$user_name', '$first_name', '$last_name', '$user_email', '$user_subject', '$user_tags', '$password');";
-      
-	  if ($mysqli->query($sql) === TRUE) {
-		  printf("Congratulations! You have been registered!") ;
-		  header( "location: welcome.php" );
-	  } else {
-		  echo "ERROR. Data not added!" . $sql . "<br>" . $mysqli->error;
-	  }
-	  
-	  
-
-	  
-	  
-	  
-    }
-	
-	
-	/*if ($mysqli->query($sql) === true)
-{
-    $_SESSION[ 'message' ] = "Registration succesful! Added $first_name to the database!";
-    
-    header( "location: welcome.php" );
-}
-*/	
-
-
+    $mysqli = new mysqli($host,$user,$password);
+if ($mysqli->connect_errno) {
+    printf("No connection to mySQL: %s\n", $mysqli->connect_error);
+    die();
 }
 
+
+
+/*
+the sql below is just testing creating a table on my personal phpdb. this will have already have been created on the server and just INSERT required which is on the register.php page. If you try to run this page again before deleting the table there will be an sql error. Matt.
+*/
+
+/*$mysqli->query('CREATE TABLE `test`.`test_users` 
+(
+   `user_id` int(11) NOT NULL,
+  `first_name` varchar(32) DEFAULT NULL,
+  `last_name` varchar(32) DEFAULT NULL,
+  `user_email` varchar(32) DEFAULT NULL,
+  `user_subject` varchar(32) DEFAULT NULL,
+  `user_tags` varchar(32) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
   
-	
-	 
+  
+
+    
+PRIMARY KEY (`user_id`) 
+);') or die($mysqli->error);
+
+*/
+
+
+
 
 
 ?>
-<!--<h1> validate</h1>!-->
-
+<div class="body-content">
+  <div class="module">
+    <h1>Play It By Peer.</h1>
+	<h2>Peer review for students by students Blah blah blah.</h2>
+		
+	<h2>Please <button type="button" onclick="alert('Directs to sign in page!')"> sign in</button>, or register below </h2>
+	
+		
+    <form class="form" action="register.php" method="post" enctype="multipart/form-data" autocomplete="off">
+      <div class="alert alert-error"></div>
+	  <input type="text" placeholder="User Name" name="user_name" required />
+      <input type="text" placeholder="First Name" name="first_name" required />
+	  <input type="text" placeholder="Last Name" name="last_name" required />
+     <input type="email" placeholder="Email" name="user_email" required />
+	 <input type="text" placeholder="User Subject" name="user_subject" required />
+	 <input type="text" placeholder="User Tags" name="user_tags" required />
+      <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
+      <input type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required />
+	  
+      <input type="submit" value="Register" name="register"  />
+    </form>
+  </div>
+  </div>
