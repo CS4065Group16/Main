@@ -123,6 +123,7 @@ if ($mysqli->connect_errno) {
     <input type="file" name="sampleDoc" id="sampleDoc">
     <input type="submit" value="Upload Document" name="submit">
 
+-->
 
 
 	
