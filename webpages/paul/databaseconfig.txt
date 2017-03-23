@@ -64,7 +64,7 @@ INSERT INTO `tags` (`tag_id`, `tag`) VALUES
 --
 
 CREATE TABLE `task` (
-  `task_id` varchar(32) NOT NULL,
+  `task_id` INT(32) NOT NULL,
   `creator_id` int(11) DEFAULT NULL,
   `claim_id` int(11) DEFAULT NULL,
   `task_title` varchar(32) DEFAULT NULL,
