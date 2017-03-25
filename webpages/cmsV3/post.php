@@ -38,6 +38,7 @@
                 $select_all_task = mysqli_query($connection, $query);
                         
                 while ($row = mysqli_fetch_assoc($select_all_task)) {
+                        $task_id                =       $row['task_id'];    
                         $task_title             =       $row['task_title'];
                         $task_type              =       $row['task_type'];
                         $task_desc              =       $row['task_desc'];
@@ -50,10 +51,7 @@
                     ?>
                     
                      
-                       <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
-                </h1>
+                       
 
                 <!-- First Blog Post -->
                 <h2>
@@ -67,10 +65,15 @@
                 <img class="img-responsive" src="http://placehold.it/900x300" alt="">
                 <hr>
                 <p><?php echo $claim_deadline ?> </p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                <hr>
+               
+             
+                     <a class="btn btn-primary" href="admin/tasks.php?source=view&t_id=<?php echo $task_id; ?>" name="claim"> Claim Task <span class="glyphicon glyphicon-chevron-right"></span></a>
                      
+                      
+                    <hr>
+                    
+                    
+                    
                      
                     
                         
@@ -81,66 +84,63 @@
                     
                     
                      <!-- Blog Comments -->
+                     
+                     
+                     <?php
+                    
+                    if(isset($_POST['flagg_task'])) {
+                        
+                        //Coming from URL
+                        $the_task_id = $_GET['p_id'];
+                        
+                        
+                        /*Fisrt we are getting the post data out*/
+                        $POST['comment_content']
+                        
+                        
+                        
+                    }
+                    
+                    ?>
+                     
+                     
+                     
+                     
 
                 <!-- Comments Form -->
                 <div class="well">
-                    <h4>Leave a Comment:</h4>
-                    <form role="form">
+                    <h4>Reason for Flagging Task</h4>
+                    <form action="" method="post" role="form">
+                       
+                       
+                       
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea name = "comment_content"class="form-control" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                     
+                        <button type="submit" name="flagg_task" class ="btn btn-warning"> Flag Task </button>
+                     
+                    <!-- <a class= href="index.php?t_id=>  <span class="glyphicon glyphicon-chevron-right"></span></a>-->
+
                     </form>
                 </div>
-
+                
+              
+                   
+                
+                
+                
+                
+                
+                
+                
                 <hr>
 
                 <!-- Posted Comments -->
                 
                 
 
-                <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </div>
-
-                <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        <!-- Nested Comment -->
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64" alt="">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Nested Start Bootstrap
-                                    <small>August 25, 2014 at 9:30 PM</small>
-                                </h4>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
-                        </div>
-                        <!-- End Nested Comment -->
-                    </div>
-                </div>
-                     
-
-                    
-                
+               
                 
 
               
