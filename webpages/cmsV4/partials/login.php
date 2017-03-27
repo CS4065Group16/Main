@@ -33,6 +33,7 @@ if(isset($_POST['login'])){
         $db_last_name       = $row['last_name'];
         $db_user_email      = $row['user_email'];
         $db_user_password   = $row['password'];
+        $db_user_rep        = $row['promote_to_mod'];
         
    
     }
@@ -51,6 +52,7 @@ if(isset($_POST['login'])){
         $_SESSION['lastname']   = $db_last_name;
         $_SESSION['password']   = $db_user_password;
         $_SESSION['user_email']   = $db_user_email;
+        $_SESSION['promote_to_mod'] =  $db_user_rep;
         
            /*If password and emailmatch redirect user*/
         header("Location: ../index.php");
