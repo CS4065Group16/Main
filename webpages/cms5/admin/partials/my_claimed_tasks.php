@@ -12,7 +12,7 @@
                                     <th>Page Count</th>
                                     <!--<th>Word Count</th>
                                     <th>File Format</th>-->
-                                    <th>Claimed Dadline</th>
+                                    <th>Claimed Deadline</th>
                                     <th>Submission Deadline</th>
                                    <!-- <th>Task Tags</th>-->
                                     <th>Change Mind</th>
@@ -21,13 +21,14 @@
                               <tbody>
                                <?php
                                 
-                                if(isset($_SESSION['userID'])) {
+                                if(isset($_SESSION['user_id'])) {
         
-                                $userID = $_SESSION['userID'];
+                                $userID = $_SESSION['user_id'];
 
                                $query ="SELECT * FROM tasks 
                                         INNER JOIN claimed_tasks on  tasks.task_id = claimed_tasks.task_id
-                                        WHERE student_id = '{$userID}' and status_id ='2'; ";
+                                        WHERE student_id = '{$userID}' and status_id ='2'
+                                        ORDER BY claimed_tasks.claimed_expiration DESC; ";
 
                                   
                                     
@@ -126,19 +127,22 @@
                                     <th>Claimed Dadline</th>
                                     <th>Submission Deadline</th>
                                    <!-- <th>Task Tags</th>-->
+                                    <th>Full File Request</th>
                                     <th>Change Mind</th>
+                                    <th>Finished</th>
                                 </tr>
                             </thead>
                               <tbody>
                                <?php
                                 
-                                if(isset($_SESSION['userID'])) {
+                                if(isset($_SESSION['user_id'])) {
         
-                                $userID = $_SESSION['userID'];
+                                $userID = $_SESSION['user_id'];
 
                                $query ="SELECT * FROM tasks 
                                         INNER JOIN claimed_tasks on  tasks.task_id = claimed_tasks.task_id
-                                        WHERE student_id = '{$userID}' and status_id ='3'; ";
+                                        WHERE student_id = '{$userID}' and status_id ='3'
+                                         ORDER BY claimed_tasks.claimed_expiration DESC; ";
 
                                   
                                     
@@ -190,7 +194,8 @@
                                            
                                             /*Delete has to send the task id with it*/     
                                             echo "<td><a href ='tasks.php?source=view&withdraw={$task_id}'>Withdraw offer</a></td>";
-                                           
+                                             echo "<td><a href ='tasks.php?source=request&p_id={$task_id}'>Full File Request</a></td>";
+                                            echo "<td><a href ='tasks.php?source=feedback&p_id={$task_id}'>Finished/Leave review</a></td>";
                                             
                                         echo "</tr>";
     
