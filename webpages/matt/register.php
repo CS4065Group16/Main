@@ -49,7 +49,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 	
 	
-	/*if ($mysqli->query($sql) === true)
+	/*
+	
+	$user_name = $_POST['user_name'];
+        $first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name'];
+		$user_email = $_POST['user_email'];
+		$user_subject = $_POST['user_subject'];
+		$user_tags = $_POST['user_tags'];
+        $password = md5($_POST['password']);
+						
+		$sql= "INSERT INTO user (user_name, first_name, last_name, user_email, user_subject, user_tags, password) VALUES ('$user_name', '$first_name', '$last_name', '$user_email', '$user_subject', '$user_tags', '$password');";
+      
+	  if ($mysqli->query($sql) === TRUE) {
+		  header( "location: homepage.php" );
+	  } else {
+		  echo "ERROR. Data not added!" . $sql . "<br>" . $mysqli->error;
+	  }
+	  
+	  
+	  
+	  
+	  
+    }
+	
+	
+	if ($mysqli->query($sql) === true)
 {
     $_SESSION[ 'message' ] = "Registration succesful! Added $first_name to the database!";
     
