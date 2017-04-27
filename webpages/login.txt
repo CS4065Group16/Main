@@ -1,0 +1,47 @@
+<?php include "db.php";?>
+<!--Turning on sessions-->
+<?php include"../dashboard/functions.php"; ?>
+<?php if(!isset($_SESSION)){
+    session_start();
+}?>
+<!--If Login Posted attemept to log in user with details -->
+<?php
+if(isset($_POST['login'])) {
+ 
+    
+    
+    
+    $username   = $_POST['username'];
+    
+    $query      =       "SELECT * FROM
+                        users 
+                        INNER JOIN banned_users
+                        ON users.user_id = banned_users.user_id
+                        where users.user_name = '{$username}' ";
+    $result = mysqli_query ($connection, $query);
+    if(!$result) {
+        die("QUERY Failed" . mysqli_error($connection) . ' ' . mysqli_errno($connection));
+    }
+      if(mysqli_num_rows($result) > 0) {
+      
+          header("Location: ../registration.php")
+          ;
+  } else {login_user($username = $_POST['username'],$password = $_POST['password']);
+    } 
+     
+   /* if(banned_user($user_id)) {
+    $_SESSION['username']   =   null;
+$_SESSION['firstname']  =   null;
+$_SESSION['lastname']   =   null;
+$_SESSION['password']   =   null;
+Redirect them registration page onec signed out
+*/
+     }
+           
+
+
+
+
+?>
+
+
